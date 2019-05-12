@@ -20,7 +20,7 @@ cd semantic-search
 ```
 3. Chance permission for solr bk data
 ```
-sudo chown -R 8983:8983 solr
+sudo chown -R 8983:8983 ./data/solr
 ```
 4. Start the proyect(It will require download some docker images so please be patient)
 ```
