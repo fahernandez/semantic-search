@@ -18,7 +18,11 @@ git clone https://github.com/fahernandez/semantic-search
 ```
 cd semantic-search
 ```
-3. Start the proyect(It will require download some docker images so please be patient)
+3. Chance permission for solr bk data
+```
+sudo chown -R 8983:8983 solr
+```
+4. Start the proyect(It will require download some docker images so please be patient)
 ```
 docker-compose up -d
 ```
@@ -26,9 +30,9 @@ docker-compose up -d
 ```
 docker-compose ps
 ```
-4. Go to http://localhost:8000/ and select English language for the configuration and click on continue(This will create the initial wordpress database configuration).
-5. Execute the mysql backup
+6. Go to http://localhost:8000/ and select English language for the configuration and click on continue(This will create the initial wordpress database configuration).
+7. Execute the mysql backup
 ```
 docker exec -i semantic-search_mysql_1 mysql -u root -psomewordpress wordpress < ./data/mysql/wp_database.sql
 ```
-6. Enjoy!
+8. Enjoy!
